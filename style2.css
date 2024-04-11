@@ -325,6 +325,10 @@ body.dark .home .text{
 
 /* Cards css starts here */
 
+.cards {
+  flex-direction: row;
+}
+
 .card {
   padding: 20px;
   width: 330px;
@@ -335,6 +339,7 @@ body.dark .home .text{
   box-shadow: 5px 5px 6px var(--card-box-shadow1),
                -5px -5px 6px var(--card-box-shadow2);
   transition: 0.4s;
+  flex-direction: row;
 }
 
 body.dark.card{
@@ -396,3 +401,23 @@ body.dark.footer{
 .by-name {
   font-weight: 700;
 }
+
+.button {
+    font: inherit;
+    line-height: 1;
+    background-color: #FF6000; 
+    color: #000000; 
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 6px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+
+  .button:hover,.button:focus {
+    background-color: #FFA559;
+  color: #000000;
+  }
