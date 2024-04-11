@@ -15,7 +15,14 @@
     --primary-color-light: #F6F5FF;
     --toggle-color: #DDD;
     --text-color: #707070;
-
+    --card-background-color: #e8e8e8;
+    --card-box-shadow1:#c3c3c3;
+    --card-box-shadow2: #cfcfcf;
+    --card-title-color:#2e54a7;
+    --card-imagebox-shadow1:#c3c3c3;
+    --card-imagebox-shadow2:#cfcfcf;
+    --card-body-color: rgb(31, 31, 31);
+    --card-footer-color: #636363;
     /* ====== Transition ====== */
     --tran-03: all 0.2s ease;
     --tran-03: all 0.3s ease;
@@ -41,6 +48,14 @@ body.dark{
     --primary-color-light: #3a3b3c;
     --toggle-color: #fff;
     --text-color: #ccc;
+    --card-background-color: #212121;
+    --card-box-shadow1:#2f2f2f;
+    --card-box-shadow2:#333333;
+    --card-title-color:#b2eccf;
+    --card-imagebox-shadow1:#2f2f2f;
+    --card-imagebox-shadow2:#333333;
+    --card-body-color: rgb(184, 184, 184);
+    --card-footer-color: #b3b3b3;
 }
 
 /* ===== Sidebar ===== */
@@ -306,4 +321,78 @@ body.dark .switch::before{
 }
 body.dark .home .text{
     color: var(--text-color);
+}
+
+/* Cards css starts here */
+
+.card {
+  padding: 20px;
+  width: 330px;
+  margin-left: 100px;
+  min-height: 370px;
+  border-radius: 20px;
+  background: var(--card-background-color);
+  box-shadow: 5px 5px 6px var(--card-box-shadow1),
+               -5px -5px 6px var(--card-box-shadow2);
+  transition: 0.4s;
+}
+
+body.dark.card{
+  background: var(--card-background-color);
+  box-shadow: var(--card-box-shadow1), var(--card-box-shadow2);
+}
+
+.card:hover {
+  translate: 0 -10px;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--card-title-color);
+  margin: 15px 0 0 10px;
+}
+
+body.dark.card-title{
+  color: var(--card-title-color);
+}
+
+.card-image {
+  min-height: 170px;
+  border-radius: 15px;
+  box-shadow: inset 8px 8px 10px var(--card-imagebox-shadow1),
+              inset -8px -8px 10px var(--card-imagebox-shadow2);
+  background-image: url('logo.png');
+  background-size: cover; /* Ensure the image covers the entire background */
+  background-position: center; /* Center the background image */
+}
+
+body.dark.card-image{
+  box-shadow: var(--card-imagebox-shadow1), var(--card-imagebox-shadow2);
+}
+
+
+.card-body {
+  margin: 13px 0 0 10px;
+  color: var(--card-body-color);
+  font-size: 15px;
+}
+
+body.dark.card-body{
+  color: var(--card-body-color);
+}
+
+.footer {
+  float: right;
+  margin: 28px 0 0 18px;
+  font-size: 13px;
+  color: var(--card-footer-color);
+}
+
+body.dark.footer{
+  color: var(--card-footer-color);
+}
+
+.by-name {
+  font-weight: 700;
 }
