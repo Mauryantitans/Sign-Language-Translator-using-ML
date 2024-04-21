@@ -1,126 +1,68 @@
-<!-- Coding by CodingLab | www.codinglabweb.com -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!----======== CSS ======== -->
-    <link rel="stylesheet" href="style2.css">
-    
-    <!----===== Boxicons CSS ===== -->
-    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-    
-    <title>GestureSpeak</title> 
+  <meta charset="UTF-8">
+  <title>Vertical menu with gooey effect on hover</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 </head>
 <body>
-    <nav class="sidebar close">
-        <header>
-            <div class="image-text">
-                <span class="image">
-                    <img src="logo.png" alt="">
-                </span>
+  <nav class="navbar" id="navbar">
+    <ul class="navbar__menu">
+      <li class="navbar__item">
+        <a href="#" class="navbar__link"><i data-feather="home"></i><span>Home</span></a>
+      </li>
+      <li class="navbar__item">
+        <a href="#" class="navbar__link"><i data-feather="message-square"></i><span>Messages</span></a>
+      </li>
+      <li class="navbar__item">
+        <a href="#" class="navbar__link"><i data-feather="users"></i><span>Customers</span></a>
+      </li>
+      <li class="navbar__item">
+        <a href="#" class="navbar__link"><i data-feather="folder"></i><span>Projects</span></a>
+      </li>
+      <li class="navbar__item">
+        <a href="#" class="navbar__link"><i data-feather="help-circle"></i><span>Help</span></a>
+      </li>
+      <li class="navbar__item">
+        <a href="#" class="navbar__link"><i data-feather="settings"></i><span>Settings</span></a>
+      </li>
+    </ul>
+  </nav>
 
-                <div class="text logo-text">
-                    <span class="name">GestureSpeak</span>
-                    <!-- "GestureSpeak: Where Your Hands Find Their Voice" -->
-                    <span class="profession">Your Hands' Voice</span>
-                </div>
-            </div>
+  <div class="cards" >
+    <article class="information [ card ]">
+      <span class="tag">Tools</span>
+      <h2 class="title">Text/Audio to Sign Language</h2>
+      <p class="info">Using video,audio or text from any available language turn them to into Gestures</p>
+      <button class="button">
+        <span>Try It</span>
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="none">
+          <path d="M0 0h24v24H0V0z" fill="none" />
+          <path d="M16.01 11H4v2h12.01v3L20 12l-3.99-4v3z" fill="currentColor" />
+        </svg>
+      </button>
+    </article>
 
-            <i class='bx bx-chevron-right toggle'></i>
-        </header>
+    <article class="information [ card ]">
+        <span class="tag">Tools</span>
+        <h2 class="title">Sign Language to Text/Audio</h2>
+        <p class="info">Using live video or pictures of sign language turn them to readable text or audio along with translation option</p>
+        <button class="button">
+          <span>Try It</span>
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="none">
+            <path d="M0 0h24v24H0V0z" fill="none" />
+            <path d="M16.01 11H4v2h12.01v3L20 12l-3.99-4v3z" fill="currentColor" />
+          </svg>
+        </button>
+      </article>
+  </div>
 
-        <div class="menu-bar">
-            <div class="menu">
 
-                <li class="search-box">
-                    <i class='bx bx-search icon'></i>
-                    <input type="text" placeholder="Search...">
-                </li>
-
-                <ul class="menu-links">
-                    <li class="nav-link">
-                        <a href="#">
-                            <i class='bx bx-home-alt icon' ></i>
-                            <span class="text nav-text">Home</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-link">
-                        <a href="#">
-                            <i class='bx bx-wrench icon' ></i>
-                            <span class="text nav-text">Tools</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-link">
-                        <a href="#">
-                            <i class='bx bx-book icon'></i>
-                            <span class="text nav-text">Resources</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-link">
-                        <a href="#">
-                            <i class='bx bx-history icon' ></i>
-                            <span class="text nav-text">Translation History</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-link">
-                        <a href="#">
-                            <i class='bx bx-message-square-add icon' ></i>
-                            <span class="text nav-text">Feedback</span>
-                        </a>
-                    </li>
-
-                </ul>
-            </div>
-
-            <div class="bottom-content">
-                <li class="">
-                    <a href="#">
-                        <i class='bx bx-log-out icon' ></i>
-                        <span class="text nav-text">Logout</span>
-                    </a>
-                </li>
-
-                <li class="mode">
-                    <div class="sun-moon">
-                        <i class='bx bx-moon icon moon'></i>
-                        <i class='bx bx-sun icon sun'></i>
-                    </div>
-                    <span class="mode-text text">Dark mode</span>
-
-                    <div class="toggle-switch">
-                        <span class="switch"></span>
-                    </div>
-                </li>
-                
-            </div>
-        </div>
-
-    </nav>
-
-    <section class="home">
-        <div class="text">Welcome</div>
-
-        <div class="card">
-          <div class="card-image"></div>
-          <p class="card-title">Tool 1</p>
-          <p class="card-body">
-            Tool description
-          </p>
-          <button class="button">
-            <span>Try It</span>
-          <p class="footer"> <span class="by-name"></span> <span class="date"></span></p>
-        </div>
-
-    </section>
-
-    <script src="script2.js"></script>
-
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="script.js"></script>
 </body>
-</html>
+</html> 
+
