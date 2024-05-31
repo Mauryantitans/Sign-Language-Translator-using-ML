@@ -325,22 +325,29 @@ body.dark .home .text{
 
 /* Cards css starts here */
 
-.cards {
-  flex-direction: row;
+.card-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows the cards to wrap to the next line if there's not enough space */
+    justify-content: center; /* Centers the cards horizontally */
+    gap: 20px; /* Adds space between the cards */
 }
 
 .card {
-  padding: 20px;
-  width: 330px;
-  margin-left: 100px;
-  min-height: 370px;
-  border-radius: 20px;
-  background: var(--card-background-color);
-  box-shadow: 5px 5px 6px var(--card-box-shadow1),
-               -5px -5px 6px var(--card-box-shadow2);
-  transition: 0.4s;
-  flex-direction: row;
+    padding: 20px;
+    width: 330px;
+    min-height: 370px;
+    border-radius: 20px;
+    background: var(--card-background-color);
+    box-shadow: 5px 5px 6px var(--card-box-shadow1),
+                -5px -5px 6px var(--card-box-shadow2);
+    transition: 0.4s;
+    display: flex;
+    flex-direction: column;
+    margin: 10px; /* Adjusted margin */
 }
+
+/* Other existing CSS for .card and its child elements */
+
 
 body.dark.card{
   background: var(--card-background-color);
@@ -411,13 +418,11 @@ body.dark.footer{
     padding: 0.5em 1em;
     border-radius: 6px;
     font-weight: 500;
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0.5rem;
-  }
+    display: inline-block; /* Changed from inline-flex to inline-block */
+    margin: 15px 10px 0 10px; /* Adjust margins as needed */
+}
 
-  .button:hover,.button:focus {
+.button:hover, .button:focus {
     background-color: #FFA559;
-  color: #000000;
-  }
+    color: #000000;
+}
